@@ -1,0 +1,5 @@
+﻿  test.c
+F:\code\能活多少秒\test.c(7,12): warning C4477: “printf”: 格式字符串“%ld”需要类型“long”的参数，但可变参数 1 拥有了类型“__int64”
+F:\code\能活多少秒\test.c(7,12): message : 请考虑在格式字符串中使用“%lld”
+F:\code\能活多少秒\test.c(7,12): message : 请考虑在格式字符串中使用“%I64d”
+  能活多少秒.vcxproj -> F:\code\能活多少秒\Debug\能活多少秒.exe
