@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\牛牛喝奶\test.c(5,18): warning C4101: “d”: 未引用的局部变量
+  牛牛喝奶.vcxproj -> F:\code\牛牛喝奶\Debug\牛牛喝奶.exe
