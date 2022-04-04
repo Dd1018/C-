@@ -1,0 +1,11 @@
+﻿  test.c
+F:\code\最大公约数和最小公倍数\test.c(6,11): warning C4477: “scanf”: 格式字符串“%ld”需要类型“long *”的参数，但可变参数 1 拥有了类型“__int64 *”
+F:\code\最大公约数和最小公倍数\test.c(6,11): message : 请考虑在格式字符串中使用“%lld”
+F:\code\最大公约数和最小公倍数\test.c(6,11): message : 请考虑在格式字符串中使用“%I64d”
+F:\code\最大公约数和最小公倍数\test.c(6,11): warning C4477: “scanf”: 格式字符串“%ld”需要类型“long *”的参数，但可变参数 2 拥有了类型“__int64 *”
+F:\code\最大公约数和最小公倍数\test.c(6,11): message : 请考虑在格式字符串中使用“%lld”
+F:\code\最大公约数和最小公倍数\test.c(6,11): message : 请考虑在格式字符串中使用“%I64d”
+F:\code\最大公约数和最小公倍数\test.c(20,12): warning C4477: “printf”: 格式字符串“%ld”需要类型“long”的参数，但可变参数 1 拥有了类型“__int64”
+F:\code\最大公约数和最小公倍数\test.c(20,12): message : 请考虑在格式字符串中使用“%lld”
+F:\code\最大公约数和最小公倍数\test.c(20,12): message : 请考虑在格式字符串中使用“%I64d”
+  最大公约数和最小公倍数.vcxproj -> F:\code\最大公约数和最小公倍数\Debug\最大公约数和最小公倍数.exe
