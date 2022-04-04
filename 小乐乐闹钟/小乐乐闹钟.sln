@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "小乐乐闹钟", "小乐乐闹钟.vcxproj", "{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Debug|x64.ActiveCfg = Debug|x64
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Debug|x64.Build.0 = Debug|x64
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Debug|x86.ActiveCfg = Debug|Win32
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Debug|x86.Build.0 = Debug|Win32
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Release|x64.ActiveCfg = Release|x64
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Release|x64.Build.0 = Release|x64
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Release|x86.ActiveCfg = Release|Win32
+		{E9D7501D-C3DB-4B8A-B1DD-971FE02E9B73}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DB67A67-E1C1-4757-8431-437D578312E0}
+	EndGlobalSection
+EndGlobal
