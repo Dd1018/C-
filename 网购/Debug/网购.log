@@ -1,0 +1,7 @@
+﻿  test.c
+F:\code\网购\test.c(10,15): warning C4477: “scanf”: 格式字符串“%lf”需要类型“double *”的参数，但可变参数 1 拥有了类型“double”
+F:\code\网购\test.c(17,32): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+F:\code\网购\test.c(21,24): warning C4477: “printf”: 格式字符串“%.2lf”需要类型“double”的参数，但可变参数 1 拥有了类型“int”
+F:\code\网购\test.c(30,32): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+F:\code\网购\test.c(34,24): warning C4477: “printf”: 格式字符串“%.2lf”需要类型“double”的参数，但可变参数 1 拥有了类型“int”
+  网购.vcxproj -> F:\code\网购\Debug\网购.exe
