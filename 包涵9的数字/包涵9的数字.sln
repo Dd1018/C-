@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "包涵9的数字", "包涵9的数字.vcxproj", "{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Debug|x64.ActiveCfg = Debug|x64
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Debug|x64.Build.0 = Debug|x64
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Debug|x86.ActiveCfg = Debug|Win32
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Debug|x86.Build.0 = Debug|Win32
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Release|x64.ActiveCfg = Release|x64
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Release|x64.Build.0 = Release|x64
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Release|x86.ActiveCfg = Release|Win32
+		{9EE07F84-50EC-46F1-879B-A5BEC44ADCEA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9577A81E-FBA2-4EFB-BA68-C6F599BDFFC1}
+	EndGlobalSection
+EndGlobal
