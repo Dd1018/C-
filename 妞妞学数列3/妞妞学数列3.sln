@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "妞妞学数列3", "妞妞学数列3.vcxproj", "{11925443-4C74-409D-A6A1-021E02E4B901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Debug|x64.ActiveCfg = Debug|x64
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Debug|x64.Build.0 = Debug|x64
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Debug|x86.ActiveCfg = Debug|Win32
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Debug|x86.Build.0 = Debug|Win32
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Release|x64.ActiveCfg = Release|x64
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Release|x64.Build.0 = Release|x64
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Release|x86.ActiveCfg = Release|Win32
+		{11925443-4C74-409D-A6A1-021E02E4B901}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE74141C-452B-498B-A494-2B59D858369A}
+	EndGlobalSection
+EndGlobal
