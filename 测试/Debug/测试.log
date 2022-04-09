@@ -1,0 +1,5 @@
+﻿  test.c
+F:\code\测试\test.c(9,24): warning C4133: “函数”: 从“int [3]”到“const char *”的类型不兼容
+F:\code\测试\test.c(10,27): warning C4133: “函数”: 从“int [5]”到“const char *”的类型不兼容
+F:\code\测试\test.c(11,25): warning C4133: “函数”: 从“int [2]”到“const char *”的类型不兼容
+  测试.vcxproj -> F:\code\测试\Debug\测试.exe
