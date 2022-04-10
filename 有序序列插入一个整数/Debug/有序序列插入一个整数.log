@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\有序序列插入一个整数\test.c(9,15): warning C4101: “k”: 未引用的局部变量
+  有序序列插入一个整数.vcxproj -> F:\code\有序序列插入一个整数\Debug\有序序列插入一个整数.exe
