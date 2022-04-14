@@ -1,0 +1,5 @@
+﻿  test.c
+F:\code\上三角形矩阵\test.c(22,25): warning C4552: ”!=“: 未使用表达式结果
+F:\code\上三角形矩阵\test.c(8,12): warning C4101: “j”: 未引用的局部变量
+F:\code\上三角形矩阵\test.c(8,9): warning C4101: “i”: 未引用的局部变量
+  上三角形矩阵.vcxproj -> F:\code\上三角形矩阵\Debug\上三角形矩阵.exe
