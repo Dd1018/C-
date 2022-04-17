@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\用其他语句代替goto语句\test.c(13,28): warning C4013: “strcmp”未定义；假设外部返回 int
+  用其他语句代替goto语句.vcxproj -> F:\code\用其他语句代替goto语句\Debug\用其他语句代替goto语句.exe
