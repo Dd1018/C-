@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\Project11\test.c(5,9): warning C4101: “j”: 未引用的局部变量
+  Project11.vcxproj -> F:\code\Project11\Debug\Project11.exe
