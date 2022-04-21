@@ -1,0 +1,4 @@
+﻿  test.c
+F:\code\牛牛的短信\test.c(10,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+F:\code\牛牛的短信\test.c(12,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  牛牛的短信.vcxproj -> F:\code\牛牛的短信\Debug\牛牛的短信.exe
