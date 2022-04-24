@@ -1,0 +1,5 @@
+﻿  test.c
+F:\code\回文素数\test.c(5,1): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+F:\code\回文素数\test.c(14,23): warning C4244: “函数”: 从“__int64”转换到“double”，可能丢失数据
+F:\code\回文素数\test.c(14,1): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  回文素数.vcxproj -> F:\code\回文素数\Debug\回文素数.exe
