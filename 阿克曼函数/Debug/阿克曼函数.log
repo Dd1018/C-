@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\阿克曼函数\test.c(11): warning C4715: “fun”: 不是所有的控件路径都返回值
+  阿克曼函数.vcxproj -> F:\code\阿克曼函数\Debug\阿克曼函数.exe
