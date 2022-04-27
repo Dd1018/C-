@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\递归实现幂运算\test.c(11): warning C4715: “fun”: 不是所有的控件路径都返回值
+  递归实现幂运算.vcxproj -> F:\code\递归实现幂运算\Debug\递归实现幂运算.exe
