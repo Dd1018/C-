@@ -1,0 +1,4 @@
+﻿  test.c
+F:\code\strlen模拟\test.c(16,11): warning C4013: “strlen”未定义；假设外部返回 int
+F:\code\strlen模拟\test.c(19): warning C4716: “reverse_string”: 必须返回一个值
+  strlen模拟.vcxproj -> F:\code\strlen模拟\Debug\strlen模拟.exe
