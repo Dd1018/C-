@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "写一个函数返回参数二进制中 1 的个数", "写一个函数返回参数二进制中 1 的个数.vcxproj", "{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Debug|x64.ActiveCfg = Debug|x64
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Debug|x64.Build.0 = Debug|x64
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Debug|x86.ActiveCfg = Debug|Win32
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Debug|x86.Build.0 = Debug|Win32
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Release|x64.ActiveCfg = Release|x64
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Release|x64.Build.0 = Release|x64
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Release|x86.ActiveCfg = Release|Win32
+		{AA9A5E22-65EE-4F04-AAF1-563B4F772D17}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA9E963D-014E-485B-ADE9-A85D18ADB496}
+	EndGlobalSection
+EndGlobal
