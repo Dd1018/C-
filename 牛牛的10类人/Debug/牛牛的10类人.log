@@ -1,4 +1,0 @@
-﻿  test.c
-F:\code\牛牛的10类人\test.c(23,18): warning C4474: printf: 格式字符串中传递的参数太多
-F:\code\牛牛的10类人\test.c(23,18): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
-  牛牛的10类人.vcxproj -> F:\code\牛牛的10类人\Debug\牛牛的10类人.exe
