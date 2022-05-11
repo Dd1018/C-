@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "将一个字符串str的内容颠倒过来，并输出。", "将一个字符串str的内容颠倒过来，并输出。.vcxproj", "{1B392B8E-62F9-4586-BE0E-256D35C51527}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Debug|x64.ActiveCfg = Debug|x64
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Debug|x64.Build.0 = Debug|x64
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Debug|x86.Build.0 = Debug|Win32
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Release|x64.ActiveCfg = Release|x64
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Release|x64.Build.0 = Release|x64
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Release|x86.ActiveCfg = Release|Win32
+		{1B392B8E-62F9-4586-BE0E-256D35C51527}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE8E73A0-DEF8-4D25-8994-36BC1B235123}
+	EndGlobalSection
+EndGlobal
