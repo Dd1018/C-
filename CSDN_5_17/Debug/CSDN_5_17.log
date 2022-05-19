@@ -1,0 +1,4 @@
+﻿  test.c
+F:\code\CSDN_5_17\test.c(6,6): warning C4013: “gets”未定义；假设外部返回 int
+F:\code\CSDN_5_17\test.c(8,20): warning C4013: “strlen”未定义；假设外部返回 int
+  CSDN_5_17.vcxproj -> F:\code\CSDN_5_17\Debug\CSDN_5_17.exe
