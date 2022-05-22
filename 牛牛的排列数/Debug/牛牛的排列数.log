@@ -1,0 +1,5 @@
+﻿  test.c
+F:\code\牛牛的排列数\test.c(23,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
+F:\code\牛牛的排列数\test.c(23,12): message : 请考虑在格式字符串中使用“%lld”
+F:\code\牛牛的排列数\test.c(23,12): message : 请考虑在格式字符串中使用“%I64d”
+  牛牛的排列数.vcxproj -> F:\code\牛牛的排列数\Debug\牛牛的排列数.exe
