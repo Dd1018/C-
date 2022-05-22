@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\牛牛的ackmann\test.c(11): warning C4715: “Ackmann”: 不是所有的控件路径都返回值
+  牛牛的ackmann.vcxproj -> F:\code\牛牛的ackmann\Debug\牛牛的ackmann.exe
