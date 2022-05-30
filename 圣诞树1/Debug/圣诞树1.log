@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\圣诞树1\test.c(6,9): warning C4101: “m”: 未引用的局部变量
+  圣诞树1.vcxproj -> F:\code\圣诞树1\Debug\圣诞树1.exe
