@@ -1,0 +1,18 @@
+﻿  test.c
+F:\code\飞机大战\test.c(172,57): warning C4133: “函数”: 从“char [38]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(173,30): warning C4133: “函数”: 从“char [13]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(231,57): warning C4133: “函数”: 从“char [38]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(232,30): warning C4133: “函数”: 从“char [13]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(319,36): warning C4133: “函数”: 从“char [14]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(320,66): warning C4133: “函数”: 从“char [42]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(321,35): warning C4133: “函数”: 从“char [13]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(339,36): warning C4133: “函数”: 从“char [14]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(340,66): warning C4133: “函数”: 从“char [42]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(341,35): warning C4133: “函数”: 从“char [13]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(371,33): warning C4133: “函数”: 从“char [14]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(372,61): warning C4133: “函数”: 从“char [40]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(373,32): warning C4133: “函数”: 从“char [13]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(418,33): warning C4133: “函数”: 从“char [14]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(419,61): warning C4133: “函数”: 从“char [40]”到“LPCWSTR”的类型不兼容
+F:\code\飞机大战\test.c(420,32): warning C4133: “函数”: 从“char [13]”到“LPCWSTR”的类型不兼容
+  飞机大战.vcxproj -> F:\code\飞机大战\Debug\飞机大战.exe
