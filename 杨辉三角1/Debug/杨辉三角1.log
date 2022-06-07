@@ -1,0 +1,3 @@
+﻿  test.c
+F:\code\杨辉三角1\test.c(8,12): warning C4101: “k”: 未引用的局部变量
+  杨辉三角1.vcxproj -> F:\code\杨辉三角1\Debug\杨辉三角1.exe
