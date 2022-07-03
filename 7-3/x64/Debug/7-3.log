@@ -1,0 +1,5 @@
+﻿  test.c
+F:\code\7-3\test.c(16,34): warning C4311: “类型强制转换”: 从“Test *”到“unsigned long”的指针截断
+F:\code\7-3\test.c(16,9): warning C4477: “printf”: 格式字符串“%p”需要类型“void *”的参数，但可变参数 1 拥有了类型“unsigned long”
+F:\code\7-3\test.c(16,9): warning C4313: “printf”: 格式字符串中的“%p”与“unsigned long”类型的参数 1 冲突
+  7-3.vcxproj -> F:\code\7-3\x64\Debug\7-3.exe
