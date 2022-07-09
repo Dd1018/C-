@@ -1,0 +1,6 @@
+﻿  test.c
+F:\code\7-9\test.c(134,9): warning C4101: “a”: 未引用的局部变量
+F:\code\7-9\test.c(134,12): warning C4101: “b”: 未引用的局部变量
+F:\code\7-9\test.c(135,9): warning C4101: “c”: 未引用的局部变量
+F:\code\7-9\test.c(135,12): warning C4101: “d”: 未引用的局部变量
+  7-9.vcxproj -> F:\code\7-9\Debug\7-9.exe
