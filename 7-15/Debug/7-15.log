@@ -1,0 +1,4 @@
+﻿  test.c
+F:\code\7-15\test.c(36,8): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+F:\code\7-15\test.c(49,17): warning C4047: “return”:“int *”与“int”的间接级别不同
+  7-15.vcxproj -> F:\code\7-15\Debug\7-15.exe
