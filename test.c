@@ -1,51 +1,105 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include"contact.h"
-void menu()
-{
-	printf("**************************************\n");
-	printf("**     1. add         2. del        **\n");
-	printf("**     3. search      4.modify      **\n");
-	printf("**     5. show        6.sort        **\n");
-	printf("**     0. exit                      **\n");
-	printf("**************************************\n");
-}
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+//int main()
+//{
+//    int left = 0;
+//    int right = 0;
+//    scanf("%d %d", &left, &right);
+//    int  returnSize[100];
+//    int i = 0;
+//    int k = 0;
+//    int j = 0;
+//    int z = 0;
+//    for (i = left; i <= right; i++)
+//    {
+//        j = i;
+//        while (j != 0)
+//        {
+//            k = j % 10;
+//            if (k == 0)
+//                break;
+//            if (i % k != 0)
+//                break;
+//            j = j / 10;
+//        }
+//        if (j == 0)
+//            returnSize[z++] = i;
+//    }
+//    for (i = 0; i < z; i++)
+//    {
+//        printf("%d ", returnSize[i]);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int arr[100];
+//    int n = 0;
+//    scanf("%d", &n);
+//    int i = 0;
+//    int j = 0;
+//    int ans[100];
+//    int sum = 1;
+//    int z = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%d", &arr[i]);
+//    }
+//    for (i = 0; i <n; i++)
+//    {
+//        sum = 1;
+//        j = 0;
+//        while (j < n)
+//        {
+//            if (j == i)
+//                j++;
+//            else if (j != i)
+//            {
+//                sum = sum * arr[j];
+//                j++;
+//            }
+//        }
+//        ans[z++] = sum;
+//    }
+//    for (i = 0; i <z; i++)
+//    {
+//        printf("%d ", ans[i]);
+//    }
+//    return 0;
+//}
+
+#include<stdio.h>
 int main()
 {
-
-	int input;
-	struct Con infor;
-	Itni(&infor);
-	do
-	{
-		menu();
-		printf("ÇëÑ¡Ôñ>:");
-		scanf("%d", &input);
-		switch (input)
-		{
-		case 1:
-			Add(&infor);
-			break;
-		case 2:
-			Del(&infor);
-			break;
-		case 3:
-			Search(&infor);
-			break;
-		case 4:
-			Modify(&infor);
-			break;
-		case 5:
-			Show(&infor);
-			break;
-		case 6:
-			Sort(&infor);
-			break;
-		case 0:
-			Save(&infor);
-			Destory(&infor);
-			printf("ÍË³ö\n");
-			break;
-		}
-	} while (input);
-	return 0;
+    int n = 0;
+    scanf("%d", &n);
+    int a = 0;
+    int b = 1;
+    int c = a + b;
+    int sum1 = 0;
+    int sum2 = 0;
+    while (1)
+    {
+        if (a == n || b == n)
+        {
+            printf("%d", 0);
+            break;
+        }
+        else if (n > a && n < b)
+        {
+            sum1 = n - a;
+            sum2 = b - n;
+            if (sum1 > sum2)
+                printf("%d", sum2);
+            else
+                printf("%d", sum1);
+            break;
+        }
+        a = b;
+        b = c;
+        c = a + b;
+    }
+    return 0;
 }
