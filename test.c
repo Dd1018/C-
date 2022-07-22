@@ -1,105 +1,103 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>
-//int main()
+//void Find(int* arr, int sz, int* p1, int* p2)
 //{
-//    int left = 0;
-//    int right = 0;
-//    scanf("%d %d", &left, &right);
-//    int  returnSize[100];
-//    int i = 0;
-//    int k = 0;
-//    int j = 0;
-//    int z = 0;
-//    for (i = left; i <= right; i++)
-//    {
-//        j = i;
-//        while (j != 0)
-//        {
-//            k = j % 10;
-//            if (k == 0)
-//                break;
-//            if (i % k != 0)
-//                break;
-//            j = j / 10;
-//        }
-//        if (j == 0)
-//            returnSize[z++] = i;
-//    }
-//    for (i = 0; i < z; i++)
-//    {
-//        printf("%d ", returnSize[i]);
-//    }
-//    return 0;
+//	int i= 0;
+//	int p = 0;
+// 	for (i = 0; i < sz; i++)
+//	{
+//		p = p ^ arr[i];
+//	} //将整个数组进行异或，数组内相同的元素异或为0，这里得到的结果是俩个不同元素异或的结果，不同元素5 6异或结果为3
+//	int pos = 0;
+//	for (pos = 0; pos< 32; pos++)
+//	{
+//		if (((p >> pos) & 1) == 1)
+//		{
+//			break;
+//		}
+//	}//找到二进制下，最低位为1的位置
+//	for (i = 0; i < sz; i++)
+//	{
+//		if (((arr[i] >> pos) & 1) == 1)
+//		{
+//			*p1 ^= arr[i];
+//		}//通过最刚才找到的位置把所有元素的那个位，按照0和1分开，分开之后进行异或，异或相同的元素为0，剩下的就是不同的元素
+//		else
+//		{
+//			*p2 ^= arr[i];
+//		}
+//	}
+//	printf("%d %d", *p1, *p2);
 //}
 //int main()
 //{
-//    int arr[100];
-//    int n = 0;
-//    scanf("%d", &n);
-//    int i = 0;
-//    int j = 0;
-//    int ans[100];
-//    int sum = 1;
-//    int z = 0;
-//    for (i = 0; i < n; i++)
-//    {
-//        scanf("%d", &arr[i]);
-//    }
-//    for (i = 0; i <n; i++)
-//    {
-//        sum = 1;
-//        j = 0;
-//        while (j < n)
-//        {
-//            if (j == i)
-//                j++;
-//            else if (j != i)
-//            {
-//                sum = sum * arr[j];
-//                j++;
-//            }
-//        }
-//        ans[z++] = sum;
-//    }
-//    for (i = 0; i <z; i++)
-//    {
-//        printf("%d ", ans[i]);
-//    }
-//    return 0;
+//	int arr[] = { 1,2,3,4,5,1,2,3,4,6 };
+//	int dog1 = 0;
+//	int dog2 = 0;
+//	int sz = sizeof(arr)/sizeof(arr[0]);
+//	Find(arr,sz,&dog1,&dog2);
 //}
-
-#include<stdio.h>
+//#include<ctype.h>
+//enum Status
+//{
+//	VALID,
+//INVALID
+//}sta=INVALID;
+//int my_atoi(const char* arr)
+//{
+//	if (*arr== '\0')
+//		return 0;
+//	while (isspace(*arr))
+//	{
+//		arr++;
+//	}//跳过空白字符
+//	int flag = 1;
+//	if (*arr== '+')
+//	{
+//		flag = 1;
+//		arr++;
+//	}
+//	else if (*arr == '-')
+//	{
+//		flag = -1;
+//		arr++;
+//	}
+//	int ret = 0;
+//	while (*arr)
+//	{
+//		ret = ret * 10 + *arr - '0';
+//		arr++;
+//	}
+//	sta = VALID;
+//	return flag * ret;
+//}
 int main()
 {
-    int n = 0;
-    scanf("%d", &n);
-    int a = 0;
-    int b = 1;
-    int c = a + b;
-    int sum1 = 0;
-    int sum2 = 0;
-    while (1)
-    {
-        if (a == n || b == n)
-        {
-            printf("%d", 0);
-            break;
-        }
-        else if (n > a && n < b)
-        {
-            sum1 = n - a;
-            sum2 = b - n;
-            if (sum1 > sum2)
-                printf("%d", sum2);
-            else
-                printf("%d", sum1);
-            break;
-        }
-        a = b;
-        b = c;
-        c = a + b;
-    }
-    return 0;
+	/*char arr[20] = "-123456";
+	int ret = my_atoi(arr);
+	if (sta == INVALID)
+	{
+		printf("非法返回:%d\n", ret);
+	}
+	else if (sta == VALID)
+	{
+		printf("合法转换:%d\n", ret);
+	}*/
+	/*int count = 0;
+	int x = -1;
+	while (x)
+	{
+		count++;
+		x = x >> 1;
+	}
+	printf("%d", count);*/
+	/*int a;
+	int b;
+	a = a < a + 1;*/
+		int a = 1, b = 2, m = 0, n = 0, k;
+		k = (n = b < a) && (m = a);
+		printf("%d,%d\n", k, m);
+	
+	return 0;
 }
