@@ -1,59 +1,83 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-//void fun(int a)
-//{
-//	printf("%p %p\n",&a,&fun);
-//	if (a == 0)
-//		return;
-//	else
-//		fun(--a);
-//}
-//int main()
-//{
-//	int a = 10;
-//	fun(a);
-//	return 0;
-//}
-static int ret = 0;
-int merga_sore(int* arr, int l, int r)
+#include<string.h>
+struct ListNode
 {
-    if (l >= r)
-        return 0;
-    int mid = (l + r) / 2;
-
-    merga_sore(arr, l, mid); merga_sore(arr, mid + 1, r);
-    int i = l;
-    int tmp[100];
-    int k = 0;
-    int j = mid + 1;
-    while (i <= mid && j <= r)
+    int val;
+   struct ListNode* next;
+};
+struct ListNode* removeElements(struct ListNode* head, int val) {
+    struct ListNode* cur = head;
+    struct ListNode* prve = NULL;
+    while (cur)
     {
-        if (arr[i] <= arr[j])
-            tmp[k++] = arr[i++];
+        if (head->val == val)
+        {
+            if (head->next == NULL)
+                head = NULL;
+            else
+            {
+                head = head->next;
+                cur = head;
+            }
+        }
         else
         {
-            tmp[k++] = arr[j++];
-            ret += (mid - i + 1);
+            while (cur->val != val)
+            {
+                prve = cur;
+                cur = cur->next;
+            }
+            if (cur->val == val)
+            {
+                prve->next = cur->next;
+                cur = cur->next;
+            }
         }
     }
-    while (i <= mid)
-        tmp[k++] = arr[i++];
-    while (j <= r)
-        tmp[k++] = arr[j++];
-    for (i = l, j = 0; i <= r; i++, j++)
+    return head;
+}
+void Slistprint(struct ListNode*head)
+{
+    while (head != NULL)
     {
-        arr[i] = tmp[j];
+        printf("%d ", head->val);
+        head = head->next;
     }
-    return ret;
+}
+struct ListNode* Buynewnode(int x)
+{
+   struct ListNode*newnode=(struct ListNode*)malloc(sizeof(struct ListNode));
+   newnode->val = x;
+   newnode->next = NULL;
+   return newnode;
+}
+void Pushfront(struct ListNode** head, int val)
+{
+    struct ListNode* newnode = Buynewnode(val);
+    if (*head == NULL)
+    {
+        *head = newnode;
+    }
+    else
+    {
+       struct ListNode* cur = *head;
+       while (cur->next!= NULL)
+       {
+           cur = cur->next;
+       }
+       cur->next = newnode;
+    }
 }
 int main()
 {
-    int arr[100];
-    int n;
-    int i;
-    scanf("%d", &n);
-    for (i = 0; i < n; i++) scanf("%d", &arr[i]);
-    int c = merga_sore(arr, 0, n - 1);
-    printf("%d", c);
-    return 0;
+    struct ListNode* List = NULL;
+    int i = 0;
+    for (i = 1; i <=2; i++)
+    {
+        Pushfront(&List, i);
+    }
+    removeElements(&List, 1);
+    Slistprint(List);
+return 0;
 }
