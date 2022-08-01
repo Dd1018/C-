@@ -1,83 +1,94 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+#include<stdlib.h>
 #include<string.h>
-struct ListNode
-{
-    int val;
-   struct ListNode* next;
+#include<assert.h>
+#include<stdbool.h>
+struct ListNode {
+	int val;
+	struct ListNode* next;
+	
 };
-struct ListNode* removeElements(struct ListNode* head, int val) {
-    struct ListNode* cur = head;
-    struct ListNode* prve = NULL;
-    while (cur)
+struct ListNode* detectCycle(struct ListNode* head) {
+    struct ListNode* fast = head;
+    struct ListNode* slow = head;
+
+    struct ListNode* newhead = NULL;
+    while (fast && fast->next)
     {
-        if (head->val == val)
+        fast = fast->next->next;
+        slow = slow->next;
+        if (slow == fast)
         {
-            if (head->next == NULL)
-                head = NULL;
-            else
-            {
-                head = head->next;
-                cur = head;
-            }
+            newhead = slow->next;
+            slow->next = NULL;
+            break;
         }
+    }
+    struct ListNode* Guard = head;//统计个数
+    struct ListNode* Guard1 = head;
+    struct ListNode* Guard2 = newhead;//第二个链表
+    int lenA = 1;
+    int lenB = 1;
+    while (Guard->next)
+    {
+        Guard = Guard->next;
+        lenA++;
+    }//统计个数，统计完Guard指向最后一个节点
+    while (newhead->next)
+    {
+        newhead = newhead->next;
+        lenB++;
+    }//统计完指向最后一个节点
+    int c = abs(lenA - lenB);
+    while (c--)
+    {
+        if (lenA > lenB)
+            Guard1 = Guard1->next;
+        else
+            Guard2 = Guard2->next;
+    }
+    while (Guard1 && Guard2)
+    {
+        if (Guard2 == Guard1)
+            return  Guard1;
         else
         {
-            while (cur->val != val)
-            {
-                prve = cur;
-                cur = cur->next;
-            }
-            if (cur->val == val)
-            {
-                prve->next = cur->next;
-                cur = cur->next;
-            }
+            Guard1 = Guard1->next;//从头开始
+            Guard2 = Guard2->next;//从第二个节点开始
         }
     }
-    return head;
-}
-void Slistprint(struct ListNode*head)
-{
-    while (head != NULL)
-    {
-        printf("%d ", head->val);
-        head = head->next;
-    }
-}
-struct ListNode* Buynewnode(int x)
-{
-   struct ListNode*newnode=(struct ListNode*)malloc(sizeof(struct ListNode));
-   newnode->val = x;
-   newnode->next = NULL;
-   return newnode;
-}
-void Pushfront(struct ListNode** head, int val)
-{
-    struct ListNode* newnode = Buynewnode(val);
-    if (*head == NULL)
-    {
-        *head = newnode;
-    }
-    else
-    {
-       struct ListNode* cur = *head;
-       while (cur->next!= NULL)
-       {
-           cur = cur->next;
-       }
-       cur->next = newnode;
-    }
+    return NULL;
 }
 int main()
 {
-    struct ListNode* List = NULL;
-    int i = 0;
-    for (i = 1; i <=2; i++)
-    {
-        Pushfront(&List, i);
-    }
-    removeElements(&List, 1);
-    Slistprint(List);
+struct ListNode* n1 = (struct ListNode*)malloc(sizeof(struct ListNode));
+assert(n1);
+struct ListNode* n2 = (struct ListNode*)malloc(sizeof(struct ListNode));
+assert(n2);
+struct ListNode* n3 = (struct ListNode*)malloc(sizeof(struct ListNode));
+assert(n3);
+struct ListNode* n4 = (struct ListNode*)malloc(sizeof(struct ListNode));
+assert(n4);
+struct ListNode* n5 = (struct ListNode*)malloc(sizeof(struct ListNode));
+assert(n5);
+struct ListNode* n6 = (struct ListNode*)malloc(sizeof(struct ListNode));
+assert(n6);
+struct ListNode* n7 = (struct ListNode*)malloc(sizeof(struct ListNode));
+assert(n7);
+
+n1->next = n2;
+n2->next = n3;
+n3->next = n4;
+n4->next = n2;
+
+n1->val = 3;
+n2->val = 2;
+n3->val = 0;
+n4->val = -4;
+
+struct ListNode* head = detectCycle(n1);
+
+
 return 0;
 }
