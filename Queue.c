@@ -4,7 +4,7 @@ void QueueInit(Queue* pq)
 {
 	assert(pq);
 	pq->head = pq->tail = NULL;
-	size_t size = 0;
+	pq->size = 0;
 }
 void QueueDestory(Queue* pq)
 {
