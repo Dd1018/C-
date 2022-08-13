@@ -2,13 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
-typedef int BTDataType;
-typedef struct BinaryTreeNode
-{
-	BTDataType data;
-	struct BinaryTreeNode* left;
-	struct BinaryTreeNode* right;
-}BTNode;
+#include"Queue.h"
 BTNode* CreateTree()
 {
 	BTNode* n1 = (BTNode*)malloc(sizeof(BTNode));
@@ -32,19 +26,17 @@ BTNode* CreateTree()
 	n6->data = 6;
 
 	n1->left = n2;
-	n1->right = n4;
-	n2->left = n3;
-	n2->right = NULL;
-	n4->left = n5;
-	n4->right = n6;
+	n1->right = n3;
+	n2->left = n4;
+	n2->right = n5;
+	n4->left = NULL;
+	n4->right = NULL;
 	n3->left = NULL;
-	n3->right = NULL;
+	n3->right = n6;
 	n5->left = NULL;
 	n5->right = NULL;
 	n6->left = NULL;
 	n6->right = NULL;
-
-	n3->right = NULL;
 
 	return n1;
 }
@@ -128,10 +120,73 @@ BTNode* TreeFind(BTNode* root, BTDataType x)
 	return NULL;
 
 }
+void BinaryTreeDestory(BTNode* root)
+{
+	if (root == NULL)
+		return;
+	BinaryTreeDestory(root->left);
+	BinaryTreeDestory(root->right);
+	free(root);
+}
+void TreeLevelOrder(BTNode* root) //遍历
+{
+	Queue q;
+	QueueInit(&q);
+	if (root)
+		QueuePush(&q, root);
+
+	while (!QueueEmpty(&q))
+	{
+		BTNode* front = QueueFront(&q);
+		QueuePop(&q);
+		printf("%d ", front->data);
+
+		// 下一层，入队列
+		if (front->left)
+			QueuePush(&q, front->left);
+
+		if (front->right)
+			QueuePush(&q, front->right);
+	}
+	printf("\n");
+
+	QueueDestroy(&q);
+}
+bool TreeLevelOrderComplete(BTNode* root) //遍历
+{
+	Queue q;
+	QueueInit(&q);
+	if (root)
+		QueuePush(&q, root);
+
+	while (!QueueEmpty(&q))
+	{
+		BTNode* front = QueueFront(&q);
+		QueuePop(&q);
+		if (front == NULL)
+			break;
+			QueuePush(&q, front->left);
+			QueuePush(&q, front->right);
+	}
+	while (!QueueEmpty(&q))
+	{
+		BTNode* front = QueueFront(&q);
+		QueuePop(&q);
+		if (front != NULL)
+		{
+			QueueDestroy(&q);
+			return false;
+		}
+	}
+
+	QueueDestroy(&q);
+	return true;
+}
 int main()
 {
 	BTNode *BT= CreateTree();
-	int c=TreeLevel(BT, 3);
-	printf("%d", c);
+	TreeLevelOrder(BT);
+	if (TreeLevelOrderComplete(BT))
+		printf("1");
 	return 0;
 }
