@@ -1,168 +1,122 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
-//using namespace std;
-//class Date
-//{
-//    friend istream& operator>>(istream& in, Date& d);
-//public:
-//    Date(int year = 1, int month = 1, int day = 1)
-//        :_year(year),
-//        _month(month),
-//        _day(day)
-//    {}
-//    int GetMonthDay(int year, int month)
-//    {
-//        static int days[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-//        int day = days[month];
-//        if (month == 2
-//            && ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)))
-//        {
-//            day += 1;
-//        }
-//        return day;
-//    }
-//    bool operator>(Date& d)
-//    {
-//        if (_year > d._year)
-//            return true;
-//        else if (_year == d._year && _month > d._month)
-//            return true;
-//        else if (_year == d._year && _month == d._month && _day > d._day)
-//            return true;
-//        else
-//            return false;
-//    }
-//    bool operator==(Date& d)
-//    {
-//        if (_year == d._year && _month == d._month && _day == d._day)
-//            return true;
-//        else
-//            return false;
-//    }
-//    bool operator<(Date& d)
-//    {
-//        return !(*this >d)&&!(*this==d);
-//    }
-//    Date operator+=(int day)
-//    {
-//        _day += day;
-//        while (_day > GetMonthDay(_year, _month))
-//        {
-//            _day -= GetMonthDay(_year, _month);
-//            _month++;
-//            if (_month == 13)
-//            {
-//                _month = 1;
-//                _year++;
-//            }
-//        }
-//        return *this;
-//    }
-//int operator-(Date& d)
-//{
-//    Date max = *this;
-//    Date min = d;
-//    if (d > *this)
-//    {
-//        max = d;
-//        min = *this;
-//    }
-//    int n = 0;
-//    while (min < max)
-//    {
-//        n++;
-//        min += 1;
-//    }
-//    return n;
-//}
-//
-//    private:
-//        int _year;
-//        int _month;
-//        int _day;
-//};
-//istream& operator>>(istream& in, Date& d)
-//{
-//    in >> d._year >> d._month >> d._day;
-//    return in;
-//}
-//int main()
-//{
-//    Date d1;
-//    cin >> d1;
-//    Date d2;
-//    cin >> d2;
-//    int n = d1 - d2;
-//    printf("%d", n);
-//    return 0;
-//}
-#include<iostream>
 using namespace std;
-class Date
+void test_string1()
 {
-    friend istream& operator>>(istream& in, Date& d);
+	string s1;
+	string s2("hello");
+	cout << s1 << endl;
+	cout <<s2 << endl;
+	string s3(s2);
+	cout << s3 << endl;
+	string s4(s3, 2, 1);
+	cout << s4<< endl;
+	string s5(s3, 2, 100);
+	cout << s5 << endl;
+	string s6("what's your name", 5);
+	cout << s6 << endl;
+	string s7(100, 'a');
+	cout << s7 << endl;
+	string s8 = "hello world";
+	cout << s8 << endl;
+}
+void test_string2()
+{
+	string s1 ;
+	string s2 = "hello world";
+	s1 = s2;
+	cout << s1 << endl;
+	s1 = "xxxxxx";
+	cout << s1 << endl;
+	s1 = 'a';
+	cout << s1 << endl;
+}
+void test_string3()
+{
+	string s1("hello world");
+	cout << s1.at(0) << endl;
+	for (int i = 0; i < s1.size(); ++i)
+	{
+		cout << s1.at(i) << " ";
+	}
+}
+class Solution {
 public:
-    Date(int year = 1, int month = 1, int day = 0)
-        :_year(year),
-        _month(month),
-        _day(day)
-    {}
-    int GetMonthDay(int year, int month)
-    {
-        static int days[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-        int day = days[month];
-        if (month == 2
-            && ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)))
-        {
-            day += 1;
-        }
-        return day;
-    }
-    Date operator+(int day)
-    {
-        _day += day;
-        while (_day > GetMonthDay(_year, _month))
-        {
-            _month++;
-            if (_month == 13)
-            {
-                _year++;
-                _month = 1;
-            }
-        }
-        return *this;
-    }
-    void Print()
-    {
-        if (_month < 10 && _day >= 10)
-            cout << _year << "-0" << _month << "-" << _day << endl;
-        else if (_month >= 10 && _day < 10)
-            cout << _year << "-" << _month << "-0" << _day << endl;
-        else if (_month < 10 && _day < 10)
-            cout << _year << "-0" << _month << "-0" << _day << endl;
-        else
-            cout << _year << "-" << _month << "-" << _day << endl;
-    }
-private:
-    int _year;
-    int _month;
-    int _day;
+	bool Isletters(char a)
+	{
+		if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
+		{
+			return true;
+		}
+		return false;
+	}
+	string reverseOnlyLetters(string s) {
+		size_t begin = 0;
+		size_t end = s.size() - 1;
+		while (begin < end)
+		{
+			while (begin < end)
+			{
+				while (Isletters(s[begin]) && Isletters(s[end]))
+				{
+					swap(s[begin], s[end]);
+					begin++; end--;
+				}
+				if (Isletters(s[begin]))
+					end--;
+				else
+					begin++;
+			}
+		}
+	}
 };
-istream& operator>>(istream& in, Date& d)
+void test_string4()
 {
-    in >> d._year >> d._month >> d._day;
-    return in;
+	string s("hello");
+	string::iterator it = s.begin();
+	while (it != s.end())
+	{
+		cout << *it << " ";
+		++it;
+	}
+}
+void PrintSring(const string& str)
+{
+auto it = str.cbegin();//const begin
+	while (it != str.cend())
+	{
+		cout << *it;
+		it++;
+	}
+	cout << endl;
+}
+void test_string5()
+{
+	string s("hello");
+	string::const_reverse_iterator rit = s.rbegin();
+
+	PrintSring(s);
+}
+void test_string6()
+{
+	string s("hello ");
+	size_t sz = s.capacity();
+	//s.reserve(1000);
+	s.resize(1000);
+	cout << "capacity changed: " << sz << '\n';
+	cout << "making s grow:\n";
+	for (int i = 0; i < 1000; ++i)
+	{
+		s.push_back('c');
+		if (sz != s.capacity())
+		{
+			sz = s.capacity();
+			cout << "capacity changed: " << sz << '\n';
+		}
+	}
 }
 int main()
 {
-    while (1)
-    {
-        int year;
-        int day;
-        cin >> year >> day;
-        Date d(year);
-        d = d + day;
-        d.Print();
-    }
-    return 0;
+	printf("%d", 10 % 10);
+	return 0;
 }
