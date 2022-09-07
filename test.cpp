@@ -1,122 +1,144 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
+#include<string>
 using namespace std;
 void test_string1()
 {
-	string s1;
-	string s2("hello");
-	cout << s1 << endl;
-	cout <<s2 << endl;
-	string s3(s2);
-	cout << s3 << endl;
-	string s4(s3, 2, 1);
-	cout << s4<< endl;
-	string s5(s3, 2, 100);
-	cout << s5 << endl;
-	string s6("what's your name", 5);
-	cout << s6 << endl;
-	string s7(100, 'a');
-	cout << s7 << endl;
-	string s8 = "hello world";
-	cout << s8 << endl;
+	string str("hello world !");
+	for (size_t i = 0; i < str.size(); )
+	{
+		if (str[i] == ' ')
+		{
+			str.erase(i, 1);
+			str.insert(i, "%20");
+			i +=3;
+		}
+		else
+			++i;
+	}
+	cout << str << endl;
+	string newstr;
+	for (int i = 0; i < str.size(); i++)
+	{
+		if (str[i] != ' ')
+		{
+			newstr += str[i];
+		}
+		else
+			newstr += "%20";
+	}
+	cout << newstr << endl;
 }
 void test_string2()
 {
-	string s1 ;
-	string s2 = "hello world";
-	s1 = s2;
-	cout << s1 << endl;
-	s1 = "xxxxxx";
-	cout << s1 << endl;
-	s1 = 'a';
-	cout << s1 << endl;
+	string filename("test.cpp");
+	FILE* fp = fopen(filename.c_str(), "r");
+	cout << filename << endl;
+	cout << filename.c_str() << endl;
+	char ch = fgetc(fp);
+	while (ch != EOF)
+	{
+		cout << ch;
+		ch = fgetc(fp);
+	}
 }
 void test_string3()
 {
-	string s1("hello world");
-	cout << s1.at(0) << endl;
-	for (int i = 0; i < s1.size(); ++i)
-	{
-		cout << s1.at(i) << " ";
-	}
+	string filename("test.cpp");
+	FILE* fp = fopen(filename.c_str(), "r");
+	cout << filename << endl;
+	cout << filename.c_str() << endl;
+	filename += '\0';
+	filename += "string.cpp";
+	cout << filename << endl;
+	cout << filename.c_str() << endl;
 }
-class Solution {
-public:
-	bool Isletters(char a)
-	{
-		if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
-		{
-			return true;
-		}
-		return false;
-	}
-	string reverseOnlyLetters(string s) {
-		size_t begin = 0;
-		size_t end = s.size() - 1;
-		while (begin < end)
-		{
-			while (begin < end)
-			{
-				while (Isletters(s[begin]) && Isletters(s[end]))
-				{
-					swap(s[begin], s[end]);
-					begin++; end--;
-				}
-				if (Isletters(s[begin]))
-					end--;
-				else
-					begin++;
-			}
-		}
-	}
-};
 void test_string4()
 {
-	string s("hello");
-	string::iterator it = s.begin();
-	while (it != s.end())
+	string filename("test.cpp.zip");
+	size_t pos = filename.rfind('.');
+	if (pos != string::npos)
 	{
-		cout << *it << " ";
-		++it;
+		string suff = filename.substr(pos,filename.size()-pos);
+		cout<< suff << endl;
 	}
-}
-void PrintSring(const string& str)
-{
-auto it = str.cbegin();//const begin
-	while (it != str.cend())
-	{
-		cout << *it;
-		it++;
-	}
-	cout << endl;
+	
 }
 void test_string5()
 {
-	string s("hello");
-	string::const_reverse_iterator rit = s.rbegin();
-
-	PrintSring(s);
+	string ur1 = "https://cplusplus.com/reference/string/string/rfind/";
+	size_t pos = ur1.find("://");
+	string ur2 = ur1.substr(0, pos-1);
+	cout << ur2 << endl;
+	size_t pos1 = ur1.find('/', pos + 3);
+	string ur3 = ur1.substr(pos + 3, pos1 - pos-3);
+	cout << ur3 << endl;
+	string ur4 = ur1.substr(pos1+1);
+	cout << ur4 << endl;
 }
 void test_string6()
 {
-	string s("hello ");
-	size_t sz = s.capacity();
-	//s.reserve(1000);
-	s.resize(1000);
-	cout << "capacity changed: " << sz << '\n';
-	cout << "making s grow:\n";
-	for (int i = 0; i < 1000; ++i)
-	{
-		s.push_back('c');
-		if (sz != s.capacity())
-		{
-			sz = s.capacity();
-			cout << "capacity changed: " << sz << '\n';
-		}
-	}
+	char a[10];
+	scanf("%s", &a);
+	cout << a << endl;
 }
-int main()
+void test_string7()
 {
-	printf("%d", 10 % 10);
+	int val;
+	double dval;
+	cin >> val >> dval;
+	string str = to_string(val);
+	cout << str<<endl;
+	string str1 = to_string(dval);
+	cout << str1 << endl;
+	str = "999";
+	str1 = "999.999";
+	val = stoi(str);
+	dval = stod(str1);
+}
+//int main()
+//{
+//	test_string7();
+//	return 0;
+//}
+int main()
+
+{
+
+	string strText = "How are you?";
+
+	string strSeparator = " ";
+
+	string strResult;
+
+	int size_pos = 0;
+
+	int size_prev_pos = 0;
+
+	while ((size_pos = strText.find_first_of(strSeparator, size_pos)) != string::npos)
+
+	{
+
+		strResult = strText.substr(size_prev_pos, size_pos - size_prev_pos);
+
+		cout << strResult << " ";
+
+		size_prev_pos = ++size_pos;
+
+	}
+
+	if (size_prev_pos != strText.size())
+
+	{
+
+		strResult = strText.substr(size_prev_pos, size_pos - size_prev_pos);
+
+		cout << strResult << " ";
+
+	}
+
+	cout << endl;
+
 	return 0;
+
 }
