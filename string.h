@@ -82,25 +82,140 @@ namespace bit
 			_str = nullptr;
 			_size = _capacity = 0;
 		}
-		string& operator=(const string& s)
+		string& operator=(string s)
 		{
-			if (this != &s)
-			{
-				string tmp(s);
-				swap(tmp);
-			}
+			swap(s);
 			return *this;
 		}
+		/*string& operator+=(char ch)
+		{
+			push_back(ch);
+			return *this;
+		}*/
+		string& operator+=(char* str)
+		{
+			append(str);
+			return *this;
+		}
+		void append(const char* str)
+		{
+			/*size_t len=strlen(str);
+			if (_size + len > _capacity)
+			{
+				reserve(_size + len);
+			}
+			strcpy(_str + _size, str);*/
+			insert(_size, str);
+		}
+		void reserve(size_t n)//保留数据
+		{
+			if (n > _capacity)
+			{
+				char* tmp = new char[n + 1];
+				strcpy(tmp, _str);
+				delete[]_str;
+				_str = tmp;
+				_capacity = n;
+			}
+		}
+		void push_back(char ch)
+		{
+			/*if (_size==_capacity)
+			{
+				reserve(_capacity == 0 ? 4 : 2 * _capacity);
+			}
+			_str[_size] = ch;
+			++_size;
+			_str[_size] = '\0';*/
+			insert(_size, ch);
+		}
+		void append(const string& s)
+		{
+			append(s._str);
+		}
+		string& operator+=(char ch)
+		{
+			push_back(ch);
+			return *this;
+		}
+		string& insert(size_t pos, char ch)
+		{
+			assert(pos <= _size);
+			reserve(_capacity==0?4:_capacity*2);
+			size_t end = _size+1;
+			while (end > pos)
+			{
+				_str[end ] = _str[end-1];
+				end--;
+			}
+			_str[end] = ch;
+			++_size;
+			return *this;
+		}
+		string& insert(size_t pos,const char* str)
+		{
+			assert(pos<=_size);
+			size_t len = strlen(str);
+			if (_size +len> _capacity)
+			{
+				reserve(_size + len);
+			}
+			size_t end = _size+len;
+			while (end >=pos+len)
+			{
+				_str[end] = _str[end - len];
+				end--;
+			}
+			strncpy(_str + pos, str, len);
+			_size += len;
+			return *this;
+		}
+		void erase(size_t pos, size_t len = npos)
+		{
+			assert(pos < _size);
+			if (len == npos || pos + len >= _size)
+			{
+				_str[pos] = '\0';
+				_size = pos;
+			}
+			else
+			{
+				strcpy(_str + pos, _str + len + pos);
+				_size -= len;
+			}
+		}
+		size_t find(char ch,size_t pos=0);
+		size_t find(const char*sub);
 	private:
 		char* _str;
 		size_t _size;
 		size_t _capacity;
+		 static size_t npos;
 	};
+	size_t string::npos = -1;
+	ostream& operator<<(ostream& out, const string& s)
+	{
+		for (size_t i = 0; i < s.size(); ++i)
+		{
+			out << s[i];
+		}
+		return out;
+	}
+	istream& operator>>(istream& in, string& s)
+	{
+		//如果输入字符串很长,不断+=，频繁扩容，效率很低
+		char ch;
+		ch = in.get();
+		while (ch != ' ' && ch != '\n')
+		{
+			s += ch;
+			ch = in.get();
+		}
+		return in;
+	}
 	void test_string1()
 	{
 		string s1("hello world");
-		string s2 = s1;
-		cout << s1.c_str() << endl;
-		cout << s1.c_str() << endl;
+		cout << s1;
 	}
 }
