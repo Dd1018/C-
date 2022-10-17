@@ -1,74 +1,310 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include<string>
-#include<iostream>
+Ôªø#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <string>
 using namespace std;
+//
 //class Person
 //{
 //public:
-//	void Print()
+//	//Person(const char* name = "peter")
+//	Person(const char* name)
+//		: _name(name)
 //	{
-//		cout << "name:" << _name << endl;
-//		cout << "age:" << _age << endl;
+//		cout << "Person()" << endl;
+//	}
+//
+//	Person(const Person& p)
+//		: _name(p._name)
+//	{
+//		cout << "Person(const Person& p)" << endl;
+//	}
+//
+//	Person& operator=(const Person& p)
+//	{
+//		cout << "Person operator=(const Person& p)" << endl;
+//		if (this != &p)
+//			_name = p._name;
+//
+//		return *this;
+//	}
+//
+//	~Person()
+//	{
+//		cout << "~Person()" << endl;
 //	}
 //protected:
-//	string _name = "peter"; // –’√˚
-//	int _age = 18; // ƒÍ¡‰
+//	string _name; // ÂßìÂêç
 //};
-//class Student :public Person
+//
+//class Student : public Person
 //{
 //public:
-//	void Set(const char* name, int age)
+//	Student(const char* name, int num)
+//		:Person(name)
+//		, _num(num)
 //	{
-//		_name = name;
-//		_age = age;
+//		cout << "Student()" << endl;
 //	}
-//protected:
-//	int _stuid;//—ß∫≈
 //
+//	Student(const Student& s)
+//		:Person(s)
+//		, _num(s._num)
+//	{
+//		cout << "Student(const Student& s)" << endl;
+//	}
+//
+//	Student& operator=(const Student& s)
+//	{
+//		if (this != &s)
+//		{
+//			Person::operator=(s);
+//
+//			_num = s._num;
+//		}
+//
+//		cout << "Student& operator=(const Student& s)" << endl;
+//
+//		return *this;
+//	}
+//
+//protected:
+//	int _num;
 //};
-// Studentµƒ_num∫ÕPersonµƒ_numππ≥…“˛≤ÿπÿœµ£¨ø…“‘ø¥≥ˆ’‚—˘¥˙¬ÎÀ‰»ªƒ‹≈‹£¨µ´ «∑«≥£»›“◊ªÏœ˝
-class Person
-{
-protected:
-	string _name = "–°¿Ó◊”"; // –’√˚
-	int _num = 111; // …Ì∑›÷§∫≈
-};
-class Student : public Person
-{
-public:
-	void Print()
-	{
-		cout << " –’√˚:" << _name << endl;
-		cout << " …Ì∑›÷§∫≈:" << Person::_num << endl;
-		cout << " —ß∫≈:" << _num << endl;
-	}
-protected:
-	int _num = 999; // —ß∫≈
-};
+//
+//
+//int main()
+//{
+//	Student s1("Âº†‰∏â", 1);
+//
+//	//Student s2(s1);
+//	Student s2 = s1;
+//
+//	Student s3("ÊùéÂõõ", 2);
+//
+//	s1 = s3;
+//
+//	cout << &s1 << endl;
+//
+//	return 0;
+//}
+//class Time
+//{
+//	friend class Date; 
+//public:
+//	Time(int hour=1, int minute=1, int second=1)
+//		: _hour(hour)
+//		, _minute(minute)
+//		, _second(second)
+//	{}
+//	void fun()
+//	{
+//		s._year = 1;
+//	}
+//private:
+//	int _hour;
+//	int _minute;
+//	int _second;
+//	Date s;
+//};
+//class Date
+//{
+//public:
+//	Date(int year = 1900, int month = 1, int day = 1)
+//		: _year(year)
+//		, _month(month)
+//		, _day(day)
+//	{}
+//	void SetTimeOfDate(int hour, int minute, int second)
+//	{
+//		_t._hour = hour;
+//		_t._minute = minute;
+//		_t._second = second;
+//	}
+//private:
+//	int _year;
+//	int _month;
+//	int _day;
+//	Time _t;
+//};
+//class Person
+//{
+//public:
+//	Person(const char* name)
+//		: _name(name)
+//	{
+//		cout << "Person()" << endl;
+//	}
+//	Person(const Person& p)
+//		: _name(p._name)
+//	{
+//		cout << "Person(const Person& p)" << endl;
+//	}
+//	Person& operator=(const Person& p)
+//	{
+//		cout << "Person operator=(const Person& p)" << endl;
+//		if (this != &p)
+//			_name = p._name;
+//		return *this;
+//	}
+//	~Person()
+//	{
+//		cout << "~Person()" << endl;
+//	}
+//private:
+//	string _name; // ÂßìÂêç
+//};
+//class Student : public Person
+//	{
+//	public:
+//		Student(const char* name="peter", int num=1)
+//			:Person(name),
+//			_num(num)
+//		{
+//
+//		}
+//		Student(const Student&s)
+//			:Person(s)//ËµãÂÄºËΩ¨Êç¢ÔºåÂàáÁâá
+//             ,_num(s._num)
+//		{}
+//		Student& operator=(const Student& s)
+//		{
+//			if (this != &s)//ÊåáÈíà
+//			{
+//				Person::operator=(s);//Áà∂Á±ªËµãÂÄº
+//				_num = s._num;
+//			}
+//			return *this;
+//		}
+//		~Student()
+//		{
+//			cout << "~Student()" << endl;
+//		
+//		}
+//	protected:
+//		int _num;
+//	};
+//class Person
+//{
+//public:
+//	Person() { ++_count; }
+//protected:
+//	string _name; // ÂßìÂêç
+//public:
+//	static int _count; // ÁªüËÆ°‰∫∫ÁöÑ‰∏™Êï∞„ÄÇ
+//};
+//int Person::_count = 0;
+//class Student : public Person
+//{
+//protected:
+//	int _stuNum; // Â≠¶Âè∑
+//};
+//class Graduate : public Student
+//{
+//protected:
+//	string _seminarCourse; // Á†îÁ©∂ÁßëÁõÆ
+//};
+//void TestPerson()
+//{
+//	Student s1;//++‰∏ÄÊ¨°
+//	Student s2;//++‰∏ÄÊ¨°
+//	Student s3;//++‰∏ÄÊ¨°
+//	Graduate s4;//++‰∏ÄÊ¨°
+//	cout << " ‰∫∫Êï∞ :" << Person::_count << endl;
+//	Student::_count = 0;
+//	cout << " ‰∫∫Êï∞ :" << Person::_count << endl;
+//}
+//int main()
+//{
+//	TestPerson();
+//	return 0;
+//}
+//#include<string>
+//class Student;
+//class Person
+//{
+//public:
+//	friend void Display(const Person& p, const Student& s);
+//protected:
+//	string _name; // ÂßìÂêç
+//};
+//class Student : public Person
+//{
+//protected:
+//	int _stuNum; // Â≠¶Âè∑
+//};
+//void Display(const Person& p, const Student& s)
+//{
+//	cout << p._name << endl;
+//}
+//class Base1 { public: int _b1; };
+//class Base2 { public: int _b2; };
+//					class Derive : public Base1, public Base2 { public: int _d; };
+//					int main() {
+//						Derive d;
+//						Base1* p1 = &d;
+//						Base2* p2 = &d;
+//						Derive* p3 = &d;
+////						return 0;
+////					}
+//class Person
+//{
+//public:
+//	string _name; // ÂßìÂêç
+//};
+//class Student :virtual public Person
+//{
+//protected:
+//	int _num; //Â≠¶Âè∑
+//};
+//class Teacher :virtual public Person
+//{
+//protected:
+//	int _id; // ËÅåÂ∑•ÁºñÂè∑
+//};
+//class Assistant : public Student, public Teacher
+//{
+//protected:
+//	string _majorCourse; // ‰∏ª‰øÆËØæÁ®ã
+//};
+//void Test()
+//{
+//
+//	Assistant a;
+//
+//	a._name = "www";
+//	a.Student::_name = "xxx";
+//	a.Teacher::_name = "yyy";
+//}
 class A
 {
 public:
-	void fun()
-	{
-		cout << "func()" << endl;
-	}
+	int _a;
 };
-class B : public A
+
+//class B : public A
+class B : virtual public A
 {
 public:
-	void fun(int i)
-	{
-		A::fun();
-		cout << "func(int i)->" << i << endl;
-	}
+	int _b;
 };
-void Test()
+
+//class C : public A
+class C : virtual public A
 {
-	B b;
-	b.A::fun();
+public:
+	int _c;
+};
+
+class D : public B, public C
+{
+public:
+	int _d;
 };
 int main()
 {
-	Test();
+	B b;
+	b._a = 1;
+	b._b = 2;
+	cout << sizeof B;
 	return 0;
 }
